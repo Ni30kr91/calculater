@@ -19,15 +19,21 @@ func main() {
 
 	if operation == "+" {
 		result = num1 + num2
-	}
-	if operation == "-" {
+	}else if operation == "-" {
 		result = num1 - num2
-	}
-	if operation == "/" {
-		result = num1 / num2
-	}
-	if operation == "*" {
+	}else if operation == "*" {
 		result = num1 * num2
+	}else if operation == "/" {
+		if num2 == 0 {
+			fmt.Println("number is not divisible by 0")
+			return
+
+		}
+		result = num1 / num2
+	
+	}else {
+	   fmt.Println("Wrong input please enter only +,-,*,/")
+	 return
 	}
 	fmt.Println("The result is: ", result)
 }
